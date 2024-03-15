@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style copy 2.css">
+    <script src="security.js"></script>
+    <link rel="icon" type="image/x-icon" href="картинки/accountlogo (1) (1).png">
+</head>
+<body>
+
+    <a class="кноп1" href="index.html">главная</a>
+    
+    <h1 class="заг1">Привет ты хорош!</h1>
+    <section>
+        <div class="text">
+        </div>
+    </section>
+
+
+    <script> 
+        if (top.location.search=="") { 
+        pass = prompt('Введите пароль'); 
+        if (pass=='5567') 
+        { alert('Пароль принят') } else { alert('Пароль непринят!'), top.location.href="index.html" } 
+        }; 
+        </script>
+       <p class="p1"> Задание :</p>
+
+       <div id="vopros1" style="display:block;">
+        <p  class="p2">Вопрос 1</p>
+        <p class="p2">*$^& = <input type="text" id="z_1"></p>
+        </div>
+        <div id="vopros2" style="display:none;">
+        <p class="p2">Вопрос 3</p>
+        <p class="p2">Сколько тебе лет ?Сколько тебе будет еcли ты родился 10 лет назад? = <input type="text" id="z_2"></p>
+        </div>
+        <div id="vopros3" style="display:none;">
+        <p class="p2">Вопрос 5</p>
+        <p class="p2">какой по счёту этот вопрос? = <input type="text" id="z_3"></p>
+        </div>
+
+        <button onclick="proverit();">Проверить</button>
+<div id="rezultat"></div>
+        <button id="kn_sl" onclick="sled_vopr();">Следующий вопрос</button>
+        <div id=”rezultat”></div>
+        <script>
+            function proverit(){
+            pr_otv_zadachi_1 = 8467;
+            pr_otv_zadachi_2 = 10;
+            pr_otv_zadachi_3 = 3;
+            otv_uch_1 = document.getElementById('z_1').value;
+            otv_uch_2 = document.getElementById('z_2').value;
+            otv_uch_3 = document.getElementById('z_3').value;
+            ball = 0;
+            if(otv_uch_1 == pr_otv_zadachi_1){
+            ball +=1;
+            }
+            if(otv_uch_2 == pr_otv_zadachi_2){
+            ball +=1;
+            }
+            if(otv_uch_3 == pr_otv_zadachi_3){
+            ball +=1;
+            }
+            vsego_zadach = 3;
+            procent_vip = ball;
+            document.getElementById('rezultat').innerHTML = procent_vip+"/3";
+            }
+            function sled_vopr(){
+    if(document.getElementById('vopros2').style.display == "block"){
+        document.getElementById('vopros2').style.display = "none";
+        document.getElementById('vopros3').style.display = "block";
+        document.getElementById('kn_sl').style.display = "none";
+        document.getElementById('kn_pr').style.display = "block";
+    }
+    if(document.getElementById('vopros1').style.display == "block"){
+        document.getElementById('vopros1').style.display = "none";
+        document.getElementById('vopros2').style.display = "block";
+    }
+}
+            </script>
+
+
+</body>
+</html>                          
+
+
+
+
